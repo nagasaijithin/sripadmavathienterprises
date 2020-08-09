@@ -1,0 +1,31 @@
+.main-nav {
+  height: 7rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  &-continer {
+    box-shadow: 1px 1px 20px -5px black;
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+    justify-content: space-between;
+    background-color: white;
+    &-chiled1 {
+      & > img {
+        height: 100%;
+      }
+    }
+    &-chiled2 {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      & > a {
+        color: $textColor;
+        text-decoration: none;
+        padding: 1rem;
+        font-size: 2rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
