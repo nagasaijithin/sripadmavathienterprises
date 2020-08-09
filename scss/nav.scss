@@ -10,6 +10,13 @@
     height: 100%;
     justify-content: space-between;
     background-color: white;
+    & .hand-burger-menu {
+      font-size: 3rem;
+      font-weight: 900;
+      transform: rotate(90deg);
+      padding: 2rem;
+      cursor: pointer;
+    }
     &-chiled1 {
       & > img {
         height: 100%;
@@ -25,6 +32,10 @@
         padding: 1rem;
         font-size: 2rem;
         margin: 1rem;
+        transition: all 0.4s ease-out;
+        &:hover {
+          color: rgb(244 94 94 / 95%);
+        }
       }
     }
   }
