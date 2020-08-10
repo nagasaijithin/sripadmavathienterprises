@@ -2,7 +2,7 @@
   height: 7rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 100;
   &-continer {
     box-shadow: 1px 1px 20px -5px black;
     display: flex;
@@ -10,22 +10,37 @@
     height: 100%;
     justify-content: space-between;
     background-color: white;
+
     & .hand-burger-menu {
       font-size: 3rem;
       font-weight: 900;
       transform: rotate(90deg);
       padding: 2rem;
       cursor: pointer;
+      display: none;
+      @media (max-width: ($tabletmedia)) {
+        display: block;
+      }
+      @media (max-width: ($mobilemediamidm2)) {
+        margin: 2rem;
+        padding: 0;
+      }
     }
     &-chiled1 {
       & > img {
         height: 100%;
+        @media (max-width: ($mobilemediamidm2)) {
+          width: 50%;
+        }
       }
     }
     &-chiled2 {
       display: flex;
       align-items: center;
       list-style: none;
+      @media (max-width: ($tabletmedia)) {
+        display: none;
+      }
       & > a {
         color: $textColor;
         text-decoration: none;

@@ -1,5 +1,11 @@
 $textColor: rgb(0 0 0 / 82%);
-
+$laptopmedia: 993px;
+$laptopmediamidm: 887px;
+$tabletmedia: 840px;
+$mobilemedialarg: 714px;
+$mobilemediamidm: 512px;
+$mobilemediamidm2: 422px;
+$mobilemediamidm3: 415px;
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +14,21 @@ $textColor: rgb(0 0 0 / 82%);
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  @media (max-width: ($laptopmedia)) {
+    font-size: 58.5%;
+  }
+  @media (max-width: ($tabletmedia)) {
+    font-size: 56.5%;
+  }
+  @media (max-width: ($mobilemedialarg)) {
+    font-size: 55.5%;
+  }
+  @media (max-width: ($mobilemediamidm )) {
+    font-size: 53.5%;
+  }
+  @media (max-width: ($mobilemediamidm3 )) {
+    font-size: 50.5%;
+  }
 }
 body {
   font-family: "Noto Sans TC", sans-serif;

@@ -22,6 +22,7 @@
     box-shadow: 1px 1px 10px -5px black;
   }
 }
+
 .main-nav-for-mobile {
   position: fixed;
   z-index: 80;
@@ -33,18 +34,25 @@
   list-style: none;
   align-items: center;
   flex-direction: column;
+  bottom: 100%;
   & > a {
     font-size: 3rem;
     padding: 3rem;
     color: black;
     text-decoration: none;
+    opacity: 0;
+    transform: translate(0px, 20px);
     transition: all 0.4s ease-out;
     &:hover {
       color: rgb(244 94 94 / 95%);
     }
   }
 }
-
+.main-nav-for-mobile-show {
+  display: flex;
+  bottom: 0;
+  transition: all 3s ease-in;
+}
 main {
   ///poster
   & .main-poster {
@@ -73,6 +81,18 @@ main {
           font-size: 3.8rem;
           font-weight: 600;
           line-height: 1.4;
+          & > * {
+            opacity: 0;
+          }
+          @media (max-width: ($tabletmedia)) {
+            font-size: 3.3rem;
+          }
+          @media (max-width: ($mobilemediamidm)) {
+            font-size: 3rem;
+          }
+          @media (max-width: ($mobilemediamidm3 )) {
+            font-size: 2.8rem;
+          }
 
           & > a {
             padding: 1rem;
@@ -96,7 +116,6 @@ main {
   /// about us
   & .main-about-us {
     margin: 12rem 2rem;
-
     font-size: 2.2rem;
     color: $textColor;
 
@@ -104,6 +123,12 @@ main {
       text-align: center;
       width: 70%;
       margin: 0 auto;
+      @media (max-width: ($laptopmedia)) {
+        width: 90%;
+      }
+      @media (max-width: ($mobilemedialarg)) {
+        width: 100%;
+      }
       & > h1 {
         margin: 2rem 0rem;
         font-size: 3rem;
@@ -123,6 +148,7 @@ main {
   & .main-products {
     margin: 4rem 1rem;
     font-size: 2rem;
+
     &-title {
       font-size: 2.5rem;
       text-align: center;
@@ -133,11 +159,23 @@ main {
         align-items: center;
         margin: 4rem;
         padding: 1rem;
+        @media (max-width: ($laptopmediamidm)) {
+          margin: 2rem;
+        }
+        @media (max-width: ($mobilemedialarg)) {
+          flex-direction: column;
+        }
         & > .main-products-grid-wapper-content {
           font-size: 1.8rem;
           flex: 1;
           padding: 2rem 4rem;
           color: $textColor;
+          @media (max-width: ($laptopmediamidm)) {
+            padding: 2rem 2rem;
+          }
+          @media (max-width: ($mobilemedialarg)) {
+            order: 2;
+          }
           & > p {
             margin: 1rem 0;
           }
@@ -148,6 +186,12 @@ main {
         & > .main-products-grid-wapper-img {
           width: 40%;
           flex: 1;
+          @media (max-width: ($mobilemedialarg)) {
+            width: 52%;
+          }
+          @media (max-width: ($mobilemediamidm)) {
+            width: 70%;
+          }
 
           & > img {
             width: 100%;
@@ -176,6 +220,9 @@ main {
   .contact-wapper {
     margin: 2rem 1rem;
     font-size: 2rem;
+    @media (max-width: ($laptopmediamidm)) {
+      font-size: 1.7rem;
+    }
     &-title {
       font-size: 3rem;
       text-align: center;
@@ -186,6 +233,12 @@ main {
       grid-gap: 3rem;
       margin: 4rem 2rem;
       align-items: center;
+      @media (max-width: ($laptopmedia)) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      @media (max-width: ($mobilemediamidm3 )) {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
       & > div {
         display: flex;
         display: flex;
@@ -193,6 +246,9 @@ main {
         align-items: center;
         & > * {
           margin: 2rem;
+        }
+        & > img {
+          width: 70%;
         }
       }
     }
@@ -205,4 +261,9 @@ footer {
   color: #ffffffc2;
   font-size: 1.5rem;
   text-align: center;
+}
+
+#svgs {
+  width: 5rem;
+  height: 5rem;
 }
