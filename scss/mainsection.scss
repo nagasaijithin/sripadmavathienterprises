@@ -186,19 +186,30 @@ main {
         & > .main-products-grid-wapper-img {
           width: 40%;
           flex: 1;
+          position: relative;
+          overflow: hidden;
+
           @media (max-width: ($mobilemedialarg)) {
             width: 52%;
           }
           @media (max-width: ($mobilemediamidm)) {
             width: 70%;
           }
-
+          & > .powder-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 4;
+          }
           & > img {
             width: 100%;
             box-shadow: 1px 1px 10px -5px black;
             height: 30vw;
             border-radius: 3px;
             object-fit: cover;
+            z-index: 5;
+            position: relative;
+            left: 0;
             @media (max-width: ($mobilemedialarg)) {
               height: 40vw;
             }
@@ -237,6 +248,19 @@ main {
       grid-gap: 3rem;
       margin: 4rem 2rem;
       align-items: center;
+      #grid-inner-flex {
+        flex-direction: column;
+        & > #grid-inner-flex-item {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-evenly;
+          & > .svgs-w {
+            height: 4rem;
+            margin: 0 0.5rem;
+          }
+        }
+      }
       @media (max-width: ($laptopmedia)) {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }

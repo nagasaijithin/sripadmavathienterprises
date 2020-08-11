@@ -27,11 +27,12 @@
       }
     }
     &-chiled1 {
+      width: 50%;
+      @media (max-width: ($laptopmedia)) {
+        width: 40%;
+      }
       & > img {
         height: 100%;
-        @media (max-width: ($mobilemediamidm2)) {
-          width: 50%;
-        }
       }
     }
     &-chiled2 {

@@ -68,3 +68,39 @@ handbargermenu.addEventListener("click", () => {
     });
   }
 });
+
+//// img sliders
+const powderImg = document.querySelectorAll(".powder-img");
+const lubmsImg = document.querySelectorAll(".lumps");
+setInterval(() => {
+  const topimg = document.querySelectorAll(".slied");
+  topimg.forEach((each) => {
+    gsap.to(each, 1, {
+      x: "110%",
+      zIndex: 4,
+    });
+  });
+  for (let i = 0; i < 4; i++) {
+    if (lubmsImg[i].classList.contains("slied")) {
+      lubmsImg[i].classList.remove("slied");
+      gsap.to(lubmsImg[i], 0.2, {
+        delay: 1,
+        x: "0%",
+      });
+      powderImg[i].classList.add("slied");
+      setTimeout(() => {
+        powderImg[i].style.zIndex = 5;
+      }, 1000);
+    } else if (powderImg[i].classList.contains("slied")) {
+      powderImg[i].classList.remove("slied");
+      gsap.to(powderImg[i], 0.2, {
+        delay: 1,
+        x: "0%",
+      });
+      lubmsImg[i].classList.add("slied");
+      setTimeout(() => {
+        lubmsImg[i].style.zIndex = 5;
+      }, 1000);
+    }
+  }
+}, 3000);
