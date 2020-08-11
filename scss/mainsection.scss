@@ -131,7 +131,7 @@ main {
       }
       & > h1 {
         margin: 2rem 0rem;
-        font-size: 3rem;
+        font-size: 4rem;
       }
       & > h3 {
         margin: 1rem 0;
@@ -150,7 +150,7 @@ main {
     font-size: 2rem;
 
     &-title {
-      font-size: 2.5rem;
+      font-size: 4rem;
       text-align: center;
     }
     &-grid-wapper {
@@ -166,7 +166,7 @@ main {
           flex-direction: column;
         }
         & > .main-products-grid-wapper-content {
-          font-size: 1.8rem;
+          font-size: 2rem;
           flex: 1;
           padding: 2rem 4rem;
           color: $textColor;
@@ -181,6 +181,7 @@ main {
           }
           & > h2 {
             margin: 2rem 0;
+            font-size: 3.6rem;
           }
         }
         & > .main-products-grid-wapper-img {
@@ -234,12 +235,13 @@ main {
   /// contact us
   .contact-wapper {
     margin: 2rem 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     @media (max-width: ($laptopmediamidm)) {
-      font-size: 1.7rem;
+      font-size: 2.2rem;
     }
+
     &-title {
-      font-size: 3rem;
+      font-size: 4rem;
       text-align: center;
     }
     &-grid {
@@ -254,7 +256,21 @@ main {
           display: flex;
           align-items: center;
           width: 100%;
-          justify-content: space-evenly;
+          flex-wrap: wrap;
+          @media (max-width: ($mobilemediamidm4)) {
+            justify-content: center;
+            margin: 3rem 0;
+          }
+          @media (max-width: ($tabletmedia)) {
+            justify-content: center;
+          }
+
+          & > * {
+            margin: 0 2rem;
+            @media (max-width: ($mobilemediamidm4)) {
+              margin: 0;
+            }
+          }
           & > .svgs-w {
             height: 4rem;
             margin: 0 0.5rem;
@@ -270,19 +286,39 @@ main {
       & > div {
         display: flex;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
+
         & > * {
           margin: 2rem;
-        }
-        & > img {
-          width: 70%;
+          @media (max-width: ($mobilemediamidm4)) {
+            margin: 3rem 0;
+          }
         }
       }
     }
   }
 }
+.btom-logo {
+  width: 100%;
+  text-align: center;
+  & > img {
+    width: 50%;
+  }
+}
 
+.website-content {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  & > p {
+    margin: 0 2rem;
+  }
+}
 footer {
   padding: 2rem;
   background: black;
@@ -293,5 +329,5 @@ footer {
 
 #svgs {
   width: 5rem;
-  height: 5rem;
+  height: 6rem;
 }
