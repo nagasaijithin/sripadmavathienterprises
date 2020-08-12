@@ -15,6 +15,8 @@ $mobilemediamidm4: 320px;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  filter: brightness(1.07);
+
   @media (max-width: ($laptopmedia)) {
     font-size: 58.5%;
   }

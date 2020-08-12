@@ -159,6 +159,8 @@ main {
         align-items: center;
         margin: 4rem;
         padding: 1rem;
+        box-shadow: 1px 2px 20px -5px black;
+
         @media (max-width: ($laptopmediamidm)) {
           margin: 2rem;
         }
@@ -169,7 +171,7 @@ main {
           font-size: 2rem;
           flex: 1;
           padding: 2rem 4rem;
-          color: $textColor;
+          color: white;
           @media (max-width: ($laptopmediamidm)) {
             padding: 2rem 2rem;
           }
@@ -330,4 +332,18 @@ footer {
 #svgs {
   width: 5rem;
   height: 6rem;
+}
+
+.p1-color {
+  background-color: #156064;
+}
+.p2-color {
+  background-color: #04a280;
+}
+.p3-color {
+  background: #3d799c;
+}
+
+.p4-color {
+  background-color: #e5a597;
 }
