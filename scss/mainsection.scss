@@ -307,6 +307,12 @@ main {
   text-align: center;
   & > img {
     width: 50%;
+    @media (max-width: ($mobilemediamidm)) {
+      width: 80%;
+    }
+    @media (max-width: ($mobilemediamidm3)) {
+      width: 90%;
+    }
   }
 }
 
@@ -330,6 +336,11 @@ footer {
 }
 
 #svgs {
+  width: 5rem;
+  height: 6rem;
+}
+
+.svgs {
   width: 5rem;
   height: 6rem;
 }
